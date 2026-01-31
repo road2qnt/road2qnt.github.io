@@ -3,50 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ega Luthfi Rais </title>
+    <title>Ega Luthfi Rais // Systems</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #0a0a0a; color: #ededed; font-family: 'Inter', monospace; }
+        body { 
+            background-color: #050505; 
+            color: #d4d4d4; 
+            font-family: 'JetBrains Mono', monospace; 
+            background-image: radial-gradient(circle at center, #111 0%, #050505 100%);
+        }
+        
+        /* Subtle Grid Background */
+        .bg-grid {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 30px 30px;
+            pointer-events: none;
+            z-index: -1;
+        }
+
         .glitch { animation: pulse 2s infinite; }
         @keyframes pulse {
-            0% { opacity: 1; }
-            50% { opacity: 0.4; }
-            100% { opacity: 1; }
+            0% { opacity: 0.8; }
+            50% { opacity: 0.3; }
+            100% { opacity: 0.8; }
+        }
+
+        /* Hover effect for links */
+        .link-item:hover {
+            color: #4ade80; /* Terminal Green */
+            text-shadow: 0 0 8px rgba(74, 222, 128, 0.4);
         }
     </style>
 </head>
-<body class="flex flex-col min-h-screen items-center justify-center p-6">
+<body class="flex flex-col min-h-screen items-center justify-center p-6 selection:bg-green-900 selection:text-white">
 
-    <div class="max-w-xl w-full">
-        <h1 class="text-2xl font-bold tracking-tighter mb-2">EGA LUTHFI RAIS</h1>
-        <p class="text-gray-500 mb-8 font-mono text-sm uppercase tracking-widest">
-            [ Quant-AI Native Builder ]
-        </p>
+    <div class="bg-grid"></div>
 
-        <div class="border-l-2 border-zinc-800 pl-6 my-10">
-            <p class="text-zinc-400 leading-relaxed mb-4">
-                Current State: <span class="text-white font-mono glitch text-xs tracking-tighter">BUILDING_SYSTEMS_IN_SILENCE</span>
+    <div class="max-w-2xl w-full">
+        <div class="flex justify-between items-end mb-12 border-b border-zinc-800 pb-4">
+            <div>
+                <h1 class="text-3xl font-bold tracking-tighter text-white">EGA LUTHFI RAIS</h1>
+                <p class="text-zinc-500 text-xs mt-1 tracking-widest uppercase">
+                    [ Systems Engineer / Quant-AI ]
+                </p>
+            </div>
+            <div class="text-right flex flex-col justify-end h-full">
+                <p class="text-[10px] text-green-500 glitch">● SYSTEM_ONLINE</p>
+            </div>
+        </div>
+
+        <div class="mb-12">
+            <p class="text-zinc-400 leading-relaxed text-sm">
+                <span class="text-green-500 mr-2">➜</span>
+                Current Focus: <span class="text-white">High-Frequency Systems & Distributed Computing.</span>
             </p>
-            <p class="text-zinc-500 text-sm italic">
-                "The jungle is being architected. Systems are being fused. Expected deployment: Near Future."
+            <p class="text-zinc-500 text-sm mt-2 italic">
+                "Architecting latency-critical infrastructure. Fusing algorithmic precision with systems engineering."
             </p>
         </div>
 
-        <nav class="flex space-x-6 font-mono text-xs uppercase">
-            <a href="cv-ega-rais.pdf" class="text-white hover:text-blue-400 transition-colors duration-300">
-                / Resume
+        <div class="mb-12">
+            <h2 class="text-xs text-zinc-600 uppercase tracking-widest mb-4">/ Selected_Protocols</h2>
+            <div class="space-y-3">
+                <div class="group flex justify-between items-center cursor-default hover:bg-zinc-900/50 p-2 -mx-2 rounded transition-all">
+                    <span class="text-sm text-zinc-300 group-hover:text-white">High-Performance LSA Engine</span>
+                    <span class="text-xs text-zinc-600 font-mono">[C++ / Linear Algebra]</span>
+                </div>
+                <div class="group flex justify-between items-center cursor-default hover:bg-zinc-900/50 p-2 -mx-2 rounded transition-all">
+                    <span class="text-sm text-zinc-300 group-hover:text-white">Scalable CP Analytics</span>
+                    <span class="text-xs text-zinc-600 font-mono">[Python / Postgres]</span>
+                </div>
+                <div class="group flex justify-between items-center cursor-default hover:bg-zinc-900/50 p-2 -mx-2 rounded transition-all">
+                    <span class="text-sm text-zinc-300 group-hover:text-white">Custom OS Kernel</span>
+                    <span class="text-xs text-zinc-600 font-mono">[C / Assembly]</span>
+                </div>
+            </div>
+        </div>
+
+        <nav class="flex flex-wrap gap-6 font-mono text-xs uppercase pt-6 border-t border-zinc-800">
+            <a href="cv-ega-rais.pdf" class="link-item text-zinc-400 transition-colors duration-300">
+                [ Resume_v2.6 ]
             </a>
-            <a href="https://github.com/ega-rais" class="text-zinc-500 hover:text-white transition-colors">
-                / GitHub
+            <a href="https://github.com/road2qnt" class="link-item text-zinc-400 transition-colors">
+                [ GitHub ]
             </a>
-            <a href="https://linkedin.com/in/ega-luthfi-rais" class="text-zinc-500 hover:text-white transition-colors">
-                / LinkedIn
+            <a href="https://codeforces.com/profile/road2qnt" class="link-item text-zinc-400 transition-colors">
+                [ Codeforces ]
+            </a>
+            <a href="https://linkedin.com/in/ega-rais-402522269/" class="link-item text-zinc-400 transition-colors">
+                [ LinkedIn ]
             </a>
         </nav>
     </div>
 
-    <footer class="absolute bottom-10 text-[10px] text-zinc-600 font-mono tracking-widest uppercase">
-        © 2026 Ega Rais // 13524115
+    <footer class="absolute bottom-6 text-[10px] text-zinc-700 font-mono tracking-widest uppercase">
+        // READY_TO_DEPLOY // 2026
     </footer>
 
 </body>
