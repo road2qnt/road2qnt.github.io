@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ega Luthfi Rais // Systems</title>
+    <title>Ega Luthfi Rais</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
@@ -11,13 +11,10 @@
             background-color: #050505; 
             color: #d4d4d4; 
             font-family: 'JetBrains Mono', monospace; 
-            /* Efek Vignette biar fokus ke tengah */
             background-image: radial-gradient(circle at center, #111 0%, #050505 80%);
             height: 100vh;
-            overflow: hidden; /* Gak bisa discroll, fix satu layar */
+            overflow: hidden; 
         }
-        
-        /* Background Grid Halus */
         .bg-grid {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
@@ -27,49 +24,33 @@
             pointer-events: none;
             z-index: -1;
         }
-
-        .glitch { animation: pulse 3s infinite; }
-        @keyframes pulse {
-            0% { opacity: 0.5; }
-            50% { opacity: 1; }
-            100% { opacity: 0.5; }
-        }
-
-        .link-item { position: relative; }
-        .link-item::before {
-            content: '>';
-            position: absolute;
-            left: -15px;
-            opacity: 0;
-            color: #4ade80;
-            transition: all 0.2s;
-        }
-        .link-item:hover::before { opacity: 1; left: -20px; }
-        .link-item:hover { color: #fff; }
+        .link-item:hover { color: #fff; text-shadow: 0 0 5px rgba(255,255,255,0.5); }
     </style>
 </head>
-<body class="flex flex-col items-center justify-center selection:bg-green-900 selection:text-white">
+<body class="flex flex-col items-center justify-center selection:bg-zinc-800 selection:text-white">
 
     <div class="bg-grid"></div>
 
     <div class="max-w-xl w-full p-6">
         
-        <div class="mb-10 border-l-2 border-zinc-800 pl-6 py-2">
+        <div class="mb-8 border-l-2 border-zinc-800 pl-6 py-1">
             <h1 class="text-4xl font-bold tracking-tighter text-white mb-2">EGA LUTHFI RAIS</h1>
-            <p class="text-green-500 text-xs tracking-[0.2em] uppercase font-bold glitch">
-                High-Performance Systems Engineer
+            <p class="text-zinc-500 text-xs tracking-[0.15em] uppercase font-bold">
+                Software Engineer // Systems & Algo
             </p>
         </div>
 
         <div class="mb-12 pl-6">
             <p class="text-zinc-500 text-sm leading-relaxed max-w-md">
-                Specializing in <span class="text-zinc-300">low-latency architecture</span>, <span class="text-zinc-300">distributed systems</span>, and <span class="text-zinc-300">algorithmic optimization</span>. Building scalable infrastructure with C++ and Python.
+                Engineering student focused on <span class="text-zinc-300">performance engineering</span> and <span class="text-zinc-300">distributed infrastructure</span>.
+                <br><br>
+                Currently building systems in <span class="text-white">C++</span> & <span class="text-white">Python</span>.
             </p>
         </div>
 
         <nav class="flex flex-col gap-3 pl-6 font-mono text-sm">
             <a href="cv-ega-rais.pdf" class="link-item text-zinc-400 transition-colors w-max">
-                / View_Resume.pdf
+                / Resume
             </a>
             <a href="https://github.com/road2qnt" class="link-item text-zinc-400 transition-colors w-max">
                 / GitHub
@@ -85,7 +66,7 @@
     </div>
 
     <div class="absolute bottom-8 text-[10px] text-zinc-800 font-mono tracking-widest uppercase">
-        ID: ROAD2QNT // SYSTEM_ONLINE
+        INIT_SYSTEM... OK
     </div>
 
 </body>
